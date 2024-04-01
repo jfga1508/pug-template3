@@ -1,10 +1,22 @@
 .product 
     &-gallery
-        display: grid
+        display: block
         grid-template-columns: repeat(5, 1fr)
         grid-template-rows: repeat(5, 1fr)
         grid-column-gap: 0px
         grid-row-gap: 0px
+        @include lg
+            display: grid
+
+        .thumb
+            border: 1px solid #F1F1F1
+            margin: 0.5rem
+            align-items: center
+            display: flex
+
+            &:focus, &:hover
+                border: 1px solid $cp1
+
 
         .thumb1
             grid-area: 5 / 1 / 6 / 2
@@ -16,6 +28,12 @@
             grid-area: 5 / 4 / 6 / 5
         .picture
             grid-area: 1 / 1 / 5 / 6
+        .title
+            grid-area: 5 / 2 / 6 / 6
+            font-size: 0.625rem
+            font-weight: 300
+            @include md
+                font-size: 0.938rem
 
         @include lg
             .thumb1
@@ -28,18 +46,87 @@
                 grid-area: 4 / 1 / 5 / 2
             .picture
                 grid-area: 1 / 2 / 5 / 6
+                background-color: $cp5
 
 
+    &-title
+        font-size: 0.625rem
 
+    &-info
+        font-size: 0.625rem
+        @include md
+            font-size: 0.625rem
+        &.h2
+            font-size: 0.875rem
+            @include md
+                font-size: 2rem
+
+    &-list
+        font-size: 0.688rem
+        @include md
+            font-size: 1rem
+    &-rating
+        img
+            width: 10px
+            @include md
+                width: 30px
     &-option
         display: flex
         justify-content: center
         align-items: center
-        height: 60px
+        height: 30px
         width: 100%
         background-color: transparent
         border: 0
+        font-size: 0.688rem
+        @include md
+            height: 60px
+            font-size: 1.125rem
 
         &:focus, &.active
             border: 1px solid $cp1 !important
             color: $cp1
+
+    &-price 
+        font-size: 1.125rem
+        font-weight: 500
+        @include md
+            font-weight: 400
+            font-size: 2rem
+        s
+            font-size: 1rem
+            color: #D7D7D7
+            @include md
+                font-size: 1.5rem
+    &-buy, &-add
+        height: 30px
+        font-size: 0.875rem
+        width: 100%
+        @include md
+            height: 60px
+            font-size: 1.125rem
+            width: auto
+    &-amount, &-amount-btn
+        height: 31px
+        width: 25px
+        font-size: 0.625rem
+        @include md
+            height: 60px
+            width: 60px
+            font-size: 2rem
+    &-price-text
+        font-size: 0.625rem
+        @include md
+            font-size: 1rem
+    &-addtocart
+        @include max-lg
+            z-index: 20
+            position: fixed
+            bottom: 0
+            left: 0
+            right: 0
+            padding-right: calc(var(--bs-gutter-x)* .5)
+            padding-left: calc(var(--bs-gutter-x)* .5)
+            padding-top: 0.5rem
+            padding-bottom: 0.5rem
+            box-shadow: -4px 0px 4px 4px rgba(0,0,0,0.05)

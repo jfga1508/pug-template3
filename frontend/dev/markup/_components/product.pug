@@ -1,27 +1,36 @@
-.row
+.row.mb-lg-5
   .col-lg-6
-    .product-gallery
-      .thumb1
-        a(href="") 
-          img.w-100(src="/assets/images/product/thumb-1.png", alt="Thumb 1")
-      .thumb2
-        a(href="") 
-          img.w-100(src="/assets/images/product/thumb-2.png", alt="Thumb 2")
-      .thumb3
-        a(href="") 
-          img.w-100(src="/assets/images/product/thumb-3.png", alt="Thumb 3")
-      .thumb4
-        a(href="") 
-          img.w-100(src="/assets/images/product/thumb-4.png", alt="Thumb 4")
-      .picture
-          img.w-100(src="/assets/images/product/product-image.png", alt="Thumb 4")
+    .product-picture.d-block.d-lg-none
+        img.w-100(src=images+"product/product-image.png", alt="Picture")
+        .product-title.py-2.text-center *LG C2 42 (106cm) 4K Smart OLED evo TV
+    .product-gallery.mb-4.mb-lg-0
+      .thumb1.thumb
+        a(href="#") 
+          img.w-100(src=images+"product/thumb-1.png", alt="Thumb 1")
+      .thumb2.thumb
+        a(href="#") 
+          img.w-100(src=images+"product/thumb-2.png", alt="Thumb 2")
+      .thumb3.thumb
+        a(href="#") 
+          img.w-100(src=images+"product/thumb-3.png", alt="Thumb 3")
+      .thumb4.thumb
+        a(href="#") 
+          img.w-100(src=images+"product/thumb-4.png", alt="Thumb 4")
+      .picture.thumb
+          img.w-100(src=images+"product/product-image.png", alt="Picture")
+      .title.pt-3.d-none.d-lg-block *LG C2 42 (106cm) 4K Smart OLED evo TV
   .col-lg-6
-    p.mb-1 Brand: LG 
-    p.mb-1 Model: OLED42C2PSA
-    p.mb-1 Availability: Only 2 in Stock
-    h2 LG C2 42 (106cm) 4K Smart OLED evo TV | WebOS | Cinema HDR
-
-    ul.ps-3
+    p.product-info.mb-1 Brand: LG 
+    p.product-info.mb-1 Model: OLED42C2PSA
+    p.product-info.mb-2.mb-lg-3 Availability: Only 2 in Stock
+    h2.product-info.h2.mb-2.mb-lg-3 LG C2 42 (106cm) 4K Smart OLED evo TV | WebOS | Cinema HDR
+    .product-rating.d-flex.gap-1.mb-3
+      img.me-lg-2(src=images+"star1.svg", alt="")
+      img.me-lg-2(src=images+"star1.svg", alt="")
+      img.me-lg-2(src=images+"star1.svg", alt="")
+      img.me-lg-2(src=images+"star1.svg", alt="")
+      img(src=images+"star2.svg", alt="")
+    ul.product-list.ps-3
       li α9 Gen5 AI Processor with AI Picture Pro & AI 4K Upscaling
       li Pixel Dimming, Perfect Black, 100% Color Fidelity & Color Volume
       li Hands-free Voice Control, Always Ready
@@ -30,7 +39,7 @@
 
     hr.my-4
 
-    .row.gy-2
+    .row.gy-2.gx-2
       .col-3.col-lg-4
         button.product-option
           span 106 cm (42)
@@ -49,3 +58,31 @@
       .col-3.col-lg-4
         button.product-option
           span 210 cm (83)
+
+    hr.my-4
+
+    .product-addtocart.bg-white
+      .row.gx-2
+        .col-lg-7 
+          p.product-price-text.mb-0.mb-lg-1 USD(incl. of all taxes)
+          p.mb-1.mb-lg-3.product-price $600.72 
+            s.ms-2 $800.00
+        .col-4.col-lg-5.text-start.text-lg-end
+          .d-inline-flex.gap-0.border.border-1
+            button#decrement.product-amount-btn.bg-white.border-0(onclick="decrement()")
+              svg.d-none.d-lg-inline-block(width="18", height="4", viewBox="0 0 18 4", fill="none", xmlns="http://www.w3.org/2000/svg")
+                path(d="M2 2H16", stroke="#191919", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              svg.d-lg-none(width="10", height="2", viewBox="0 0 10 2", fill="none", xmlns="http://www.w3.org/2000/svg")
+                path(d="M0.333313 1.08997H9.66665", stroke="black", stroke-width="0.5", stroke-linecap="round", stroke-linejoin="round")
+            input#amount.product-amount.text-center.border.border-top-0.border-bottom-0(value="1")
+            button#increment.product-amount-btn.bg-white.border-0(onclick="increment()")
+              svg.d-none.d-lg-inline-block(width="18", height="18", viewBox="0 0 18 18", fill="none", xmlns="http://www.w3.org/2000/svg")
+                path(d="M9 2V16", stroke="#191919", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+                path(d="M2 9H16", stroke="#191919", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              svg.d-lg-none(width="10", height="12", viewBox="0 0 10 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+                path(d="M5 0.898926V11.2809", stroke="black", stroke-width="0.5", stroke-linecap="round", stroke-linejoin="round")
+                path(d="M0.333313 6.08997H9.66665", stroke="black", stroke-width="0.5", stroke-linecap="round", stroke-linejoin="round")
+        .col-4.col-lg-6 
+          button.product-buy.btn.btn-primary.rounded-0.text-white.px-3.px-md-5(type="submit") Buy Now
+        .col-4.col-lg-6.text-end
+          button.product-add.btn.btn-outline-primary.rounded-0.px-3.px-md-5(type="submit") Add to Cart

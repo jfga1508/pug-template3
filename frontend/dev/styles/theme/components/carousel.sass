@@ -19,6 +19,33 @@
         height: 256px
       
 
+  &-arrow
+    width: 20px
+    height: 20px
+    background-color: $cp7
+    z-index: 1
+
+    &:hover, &:focus
+      background-color: $cp1
+
+  &-prev, &-next
+    &::before
+      content: ''
+      display: block
+      width: 20px
+      height: 20px
+      background-repeat: no-repeat
+      background-position: center
+
+  &-prev
+    left: 0
+    &::before
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 0.5L1 4.5L5 8.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+
+  &-next
+    right: 0
+    &::before
+      background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0.5L5 4.5L1 8.5' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
 
   &-dots 
     li 
@@ -29,9 +56,11 @@
         opacity: 1
 
       button:before 
-        font-size: 14px
+        font-size: 25px
         opacity: 1
         color: $bg2
+        @include md
+          font-size: 50px
 
 .card
   &-title,
@@ -53,6 +82,10 @@
     font-size: 0.5rem
     @include lg
       font-size: 1rem
+    
+    &:hover, &:focus
+      background-color: #f3f3f3 !important
+      
   &-label
     &-new,
     &-hot,

@@ -31,4 +31,17 @@ h3, .h3
 
 
 section 
-  padding: 3rem 2rem
+  padding: 3rem 0
+  @include md
+    padding: 3rem 2rem
+
+.btn
+  
+  &-primary:hover
+    background-color: $cp8
+    border-color: $cp8
+
+  &-outline-primary:hover
+    background-color: #F3F3F3
+    border-color: $cp1
+    color: $cp1
