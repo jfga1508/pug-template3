@@ -1,0 +1,48 @@
+.navbar
+    &-brand
+        font-size: 34px
+        font-weight: 700
+        line-height: 25px
+        letter-spacing: 2px
+        text-align: left
+        color: #FFF !important
+
+        @include lg
+            color: $cp1 !important
+
+    .navbar-toggler
+        border: 0
+        padding: 0
+        width: 40px
+        height: 40px
+        
+    .navbar-toggler-icon
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.75 13.75V12.375H19.25V13.75H2.75ZM2.75 8.25H19.25V9.625H2.75V8.25ZM19.25 4.125V5.5H2.75V4.125H19.25ZM2.75 16.5V17.875H19.25V16.5H2.75Z' fill='white'/%3E%3C/svg%3E%0A")
+
+    .navbar-collapse
+        position: absolute
+        top: 40px
+        z-index: 10
+        @include lg
+            position: relative
+            top: initial
+
+    .navigation
+        height: 76px
+
+    .nav-link
+        color: #FFF
+    
+    ul
+        li 
+            a
+                @include lg
+                    color: $cp3
+
+.breadcrumbs
+    font-weight: 300
+    letter-spacing: 0.2em
+    text-transform: uppercase
+    font-size: 0.625rem
+    @include md
+        font-size: 1.125rem

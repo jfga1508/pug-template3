@@ -1,0 +1,39 @@
+{
+  "name": "VideoTool",
+  "version": "1.0.0",
+  "description": "Basic template for project.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass"
+  },
+  "author": "Jean <jfga1508@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "gulp-javascript-obfuscator": "^1.1.6",
+    "jquery": ">=3.0.0",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.18",
+    "browser-sync": "^2.18.13",
+    "concat": "^1.0.3",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-js-obfuscator": "^1.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "mq4-hover-shim": "^0.3.0",
+    "sass": "^1.72.0"
+  },
+  "overrides": {
+    "graceful-fs": "^4.2.11"
+  },
+  "private": true
+}

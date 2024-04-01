@@ -1,0 +1,48 @@
+$cp1: #e73c17;
+$cp2: #2f333a;
+$cp3: #191919;
+$cp4: #6f6f6f;
+$cp5: #f1f1f1;
+$cp6: #f0f0f0;
+$cp7: #d9d9d9;
+$bg1: #fff;
+$bg2: #f4f5f8;
+
+// Add the new colors to bootstrap
+
+$theme-colors: (
+  "primary": $cp1,
+  "secondary": $cp2,
+  cp2: $cp2,
+  cp3: $cp3,
+  cp4: $cp4,
+  cp5: $cp5,
+  cp6: $cp6,
+  cp7: $cp7,
+  bg2: $bg2,
+  "gray": $cp5,
+);
+$link-color: $cp1;
+$link-hover-color: $cp4;
+$body-bg: $bg1;
+$progress-bg: $cp4;
+
+// Typografy
+$font-family-base: "Inter", sans-serif;
+$font-weight-base: 300;
+
+// Utilities
+$utilities: (
+  "opacity": (
+    property: opacity,
+    values: (
+      0: 0,
+      25: 0.25,
+      45: 0.45,
+      50: 0.5,
+      75: 0.75,
+      90: 0.9,
+      100: 1,
+    ),
+  ),
+);

@@ -1,0 +1,42 @@
+//- { routers } ...........................
+- var css = "assets/css/";
+- var js = "assets/js/";
+
+doctype html
+html
+  head
+    title Home
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='chrome=1')
+    meta(name='title', content='')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0')
+
+    block head_end
+
+    //{ styles generales } ...............................
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap", rel="stylesheet")
+    link(rel="stylesheet", type="text/css", href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+    link(rel="stylesheet" href=css+"slick-theme.css")
+    link(rel="stylesheet" href=css+"styles.css")
+  body
+    // .......................{ header}
+    include ./header
+    // { end header}
+
+    // .......................{ global - content}
+    
+    block content
+    // { end global - content}
+
+    // .......................{ footer}
+    include ./footer
+    // { end footer}
+    
+    script( src=js+"vendors.js" )
+    script(type="text/javascript", src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")    
+    script( src=js+"app.js?ver=1.0.0" )
+    block script_start
+      //- Main scripts

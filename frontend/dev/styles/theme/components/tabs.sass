@@ -1,0 +1,23 @@
+.nav-tabs .nav-link
+    color: #000
+    font-size: 0.75rem
+    font-weight: 500
+    padding: 0.5rem 0
+
+    @include md
+        padding: 0.5rem 2rem
+        font-size: 1.375rem
+    
+
+    &.active, &:focus
+        border-bottom-color: $cp1 !important
+        border-width: 0 0 1px !important
+        border-style: solid !important
+
+.tab-content>.tab-pane 
+    max-width: 1016px
+    margin: auto
+    font-size: 0.625rem
+
+    @include md
+        font-size: 1.125rem

@@ -1,0 +1,32 @@
+
+input
+    font-size: 0.625rem
+    &::placeholder
+        padding-left: 1rem
+        color: #969696
+    @include md
+        font-size: 1.25rem
+.newsletter
+    background: url(/assets/images/bg-mobile.jpg) rgba(0, 0, 0, 0.3)
+    background-size: cover
+    background-blend-mode: multiply
+    @include md
+        background: url(/assets/images/bg.jpg) rgba(0, 0, 0, 0.3)
+        background-size: cover
+    &-title
+        font-size: 1.125rem
+        @include md
+            font-size: 1.75rem
+    &-text
+        font-size: 0.875rem
+        @include md
+            font-size: 1.25rem
+    &-form
+        height: 37px
+        @include md
+            height: 73px
+        
+        button
+            font-size: 0.75rem
+            @include md
+                font-size: 1.25rem

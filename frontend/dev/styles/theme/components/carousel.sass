@@ -1,0 +1,95 @@
+.slick
+  &-slide 
+    &.slick-active
+      .slide-wrap
+        margin: 0 0.7rem
+        @include lg
+          margin: auto
+
+    .slide-wrap
+      margin: auto
+
+    img 
+      width: 100%
+      height: 106px
+      object-fit: contain
+
+      @include lg
+        width: 256px
+        height: 256px
+      
+
+
+  &-dots 
+    li 
+      margin: 0
+
+      &.slick-active button:before
+        color: $cp1
+        opacity: 1
+
+      button:before 
+        font-size: 14px
+        opacity: 1
+        color: $bg2
+
+.card
+  &-title,
+  &-price
+    font-size: 0.688rem
+    white-space: nowrap
+    @include md
+      font-size: 1.25rem
+
+  &-body
+    padding: 5px 10px 15px
+    @include lg
+      padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x)
+  &-actions
+    height: 20px
+    @include lg
+      height: 60px
+  &-buy
+    font-size: 0.5rem
+    @include lg
+      font-size: 1rem
+  &-label
+    &-new,
+    &-hot,
+    &-discount,
+    &-warranty
+      min-width: 31px
+      height: 11px
+      border-radius: 100px
+      color: #FFF
+      font-size: 0.375rem
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      padding: 0 0.5rem
+      @include md
+        min-width: 67px
+        height: 26px
+        padding: 0 1rem
+        font-size: 0.75rem
+    &-new
+      background-color: #12A05C
+    &-hot
+      background-color: #FF9900
+    &-discount
+      background-color: #E73C17
+    &-warranty
+      background-color: #7F7CF6
+    &-fav
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      border: 1px solid #D7D7D7
+      background-image: url("data:image/svg+xml,%3Csvg width='11' height='10' viewBox='0 0 11 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.51367 2.76954C9.38277 2.46645 9.19403 2.19179 8.95801 1.96094C8.72181 1.72941 8.44332 1.54541 8.1377 1.41895C7.82078 1.2873 7.48087 1.21992 7.1377 1.22071C6.65625 1.22071 6.18652 1.35255 5.77832 1.60157C5.68066 1.66114 5.58789 1.72657 5.5 1.79786C5.41211 1.72657 5.31934 1.66114 5.22168 1.60157C4.81348 1.35255 4.34375 1.22071 3.8623 1.22071C3.51562 1.22071 3.17969 1.28712 2.8623 1.41895C2.55566 1.54591 2.2793 1.72852 2.04199 1.96094C1.80566 2.19153 1.61687 2.46625 1.48633 2.76954C1.35059 3.08497 1.28125 3.41993 1.28125 3.76466C1.28125 4.08985 1.34766 4.42872 1.47949 4.77344C1.58984 5.06153 1.74805 5.36036 1.9502 5.66212C2.27051 6.13966 2.71094 6.6377 3.25781 7.14259C4.16406 7.9795 5.06152 8.55762 5.09961 8.58106L5.33105 8.7295C5.43359 8.79493 5.56543 8.79493 5.66797 8.7295L5.89941 8.58106C5.9375 8.55665 6.83398 7.9795 7.74121 7.14259C8.28809 6.6377 8.72852 6.13966 9.04883 5.66212C9.25098 5.36036 9.41016 5.06153 9.51953 4.77344C9.65137 4.42872 9.71777 4.08985 9.71777 3.76466C9.71875 3.41993 9.64941 3.08497 9.51367 2.76954Z' fill='%23E73C17'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: center
+      @include md
+        width: 60px
+        height: 60px
+        background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.041 8.30861C26.6483 7.39935 26.0821 6.57538 25.374 5.88283C24.6654 5.18822 23.83 4.63622 22.9131 4.25686C21.9623 3.86191 20.9426 3.65976 19.9131 3.66213C18.4688 3.66213 17.0596 4.05764 15.835 4.80471C15.542 4.98342 15.2637 5.17971 15 5.39358C14.7363 5.17971 14.458 4.98342 14.165 4.80471C12.9404 4.05764 11.5312 3.66213 10.0869 3.66213C9.04688 3.66213 8.03906 3.86135 7.08691 4.25686C6.16699 4.63772 5.33789 5.18557 4.62598 5.88283C3.91698 6.5746 3.35062 7.39876 2.95898 8.30861C2.55176 9.2549 2.34375 10.2598 2.34375 11.294C2.34375 12.2696 2.54297 13.2862 2.93848 14.3203C3.26953 15.1846 3.74414 16.0811 4.35059 16.9863C5.31152 18.419 6.63281 19.9131 8.27344 21.4278C10.9922 23.9385 13.6846 25.6729 13.7988 25.7432L14.4932 26.1885C14.8008 26.3848 15.1963 26.3848 15.5039 26.1885L16.1982 25.7432C16.3125 25.6699 19.002 23.9385 21.7236 21.4278C23.3643 19.9131 24.6855 18.419 25.6465 16.9863C26.2529 16.0811 26.7305 15.1846 27.0586 14.3203C27.4541 13.2862 27.6533 12.2696 27.6533 11.294C27.6563 10.2598 27.4482 9.2549 27.041 8.30861Z' fill='%23E73C17'/%3E%3C/svg%3E%0A")
+      

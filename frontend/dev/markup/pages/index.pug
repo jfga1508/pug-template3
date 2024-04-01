@@ -1,0 +1,53 @@
+//- heredamos los blocks principales de nuestro template padre.
+extends ../_layouts/base
+
+//- agregamos los layouts, components, elements
+block content
+	main.w-100#main
+
+		section.bg-bg2.p-1.p-md-5
+			.text-center.mt-4.mb-4
+				h1 TV Collection
+				.d-block.size-18px.breadcrumbs Home / Product / Tv Collection
+
+		section.pb-0.pb-md-5
+			.container
+				include ../_components/product
+
+				ul.nav.nav-tabs.d-flex.justify-content-evenly#myTab(role="tablist")
+					li.nav-item(role="presentation")
+						button.nav-link.border-top-0.border-start-0.border-end-0.active#description-tab(data-bs-toggle="tab", data-bs-target="#desc", type="button", role="tab", aria-controls="Description", aria-selected="true") Description
+					li.nav-item(role="presentation")
+						button.nav-link.border-top-0.border-start-0.border-end-0#specification-tab(data-bs-toggle="tab", data-bs-target="#specs", type="button", role="tab", aria-controls="Specification", aria-selected="false") Specification
+					li.nav-item(role="presentation")
+						button.nav-link.border-top-0.border-start-0.border-end-0#reviews-tab(data-bs-toggle="tab", data-bs-target="#reviews", type="button", role="tab", aria-controls="Reviews", aria-selected="false") Reviews
+				.tab-content.mt-3#myTabContent
+					.tab-pane.fade.show.active#desc(role="tabpanel", aria-labelledby="description-tab")
+						p The LG C2 42 (106cm) 4K Smart OLED evo TV is the best all around OLED TV we've tested. Although all OLEDs deliver similar fantastic picture quality, this one stands out for its value because it has many gaming oriented features that are great for gamers.
+						p *Only 65G2 is shown in the image for example purposes. All 2022 LG OLED models feature eco-friendly packaging.
+						p **65C2 Stand model is at a minimum 39% lighter than the C1 series. More...
+					
+					.tab-pane.fade#specs(role="tabpanel", aria-labelledby="specification-tab") ...
+					.tab-pane.fade#reviews(role="tabpanel", aria-labelledby="reviews-tab") ...
+			
+
+		section.bg-white.pt-0.pt-md-5.pb-4.pb-md-5
+			.container
+				.row.mb-2.mb-md-5
+					.col-lg-12.text-center
+						h2.pr-3 Related Products
+				.row 
+					.col-12
+							
+					.col-12.mb-4
+						include ../_components/carousel
+		section.newsletter.bg-cp4.text-white
+			.container 
+				.row
+					.col-12.col-md-6.mb-4.mb-md-0
+						h2.newsletter-title Join our newsletter and get offers
+						p.newsletter-text.mb-0 Sign up our newsletter
+					.col-12.col-md-6
+						form.newsletter-form.d-flex(action)
+							input.px-3.border-0.w-100(type="text", placeholder="Enter your email")
+							button.btn.btn-primary.rounded-0.text-white.px-3.px-md-5(type="submit") Subscribe
