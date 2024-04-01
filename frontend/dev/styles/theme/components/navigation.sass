@@ -9,7 +9,10 @@
 
         @include lg
             color: $cp1 !important
-
+    &>div
+        height: 40px
+        @include lg
+            height: 76px
     .navbar-toggler
         border: 0
         padding: 0
@@ -23,8 +26,11 @@
         position: absolute
         top: 40px
         z-index: 10
+        width: 100%
+        left: 0
+        right: 0
         @include lg
-            position: relative
+            //position: relative
             top: initial
 
     .navigation
